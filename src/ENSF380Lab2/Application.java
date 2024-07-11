@@ -11,6 +11,8 @@
  * 
  */
 
+//HELLO FRIENDS HELLO FRIENDS HELLO FRIENDS HELLO FRIENDS HELLO FRIENDS HELLO FRIENDS HELLO FRIENDS
+
  package ENSF380Lab2;
  import java.util.Scanner;
  
@@ -56,6 +58,7 @@
 	if (choice == 4) {
 		clearConsole();
 	}
+	scanner.close();
 }
 
 	public static void clearConsole() {  
@@ -91,6 +94,7 @@
 		if (choice == 2) {
 			clearConsole();
 		}
+		scanner.close();
 	}
 
 	public static void managePetInfo() throws InvalidIdException {
@@ -152,9 +156,17 @@
 			CareProfile nullCareProfile = new CareProfile("", emptyThing, "");
 			Pet nullPet = new Pet(0, "", "", "", "", nullCareProfile);
 			petArray[removalId] = nullPet;
-	 	}
+		}
 		if (choice == 5) {
 			clearConsole();
+			System.out.println("Selecting this option will pull up a list of clients to choose from."+ 
+			"Choosing a client will allow to view their financial standing with the pet resort, including any outstanding payments, payment history, potential payment poits, and more." +
+			"The user will also have the option to return to the main menu.");
+		}
+		if (choice == 6) {
+			clearConsole();
+			System.out.println("Selecting this option will show a calendar view of all scheduled reservations and bookings." +
+			"There will be options to add a new booking, remove a booking, and view the details of a booking." +);
 		}
 	}
-}
+ }
