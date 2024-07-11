@@ -18,7 +18,7 @@
 
 	public static Client[] clientArray = new Client[10];
 	public static Pet[] petArray = new Pet[10];
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidIdException {
 	mainMenu();
 	}
 	 
@@ -26,7 +26,7 @@
 	 // Method for Menu UI.
 	 
 	 
-	public static void mainMenu() {
+	public static void mainMenu() throws InvalidIdException {
 	System.out.println("YYC PET RESORT MANAGMENT SOFTWARE");
 	System.out.println("Select the following options: ");
 	System.out.println("1. Manage Client Information"); // Use Case 1: Manage Client Information
@@ -63,7 +63,7 @@
 		System.out.flush();  
 }
 	
-	public static void manageClientelleMenu() {
+	public static void manageClientelleMenu() throws InvalidIdException {
 		System.out.println("YYC PET RESORT MANAGMENT SOFTWARE - Manage Client Information");
 		System.out.println("Select the following options: ");
 		System.out.println("1. Add Client Information"); // Use Case 2: Add Client
@@ -93,7 +93,7 @@
 		}
 	}
 
-	public static void managePetInfo() {
+	public static void managePetInfo() throws InvalidIdException {
 		System.out.println("YYC PET RESORT MANAGMENT SOFTWARE - Manage Pet Information");
 		System.out.println("Select the following options: ");
 		System.out.println("1. Add Pet"); // Use Case 4: Add Pet
