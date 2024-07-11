@@ -46,12 +46,20 @@
 		managePetInfo(); // Use Case 3: Manage Pet Info
 	}
 	if (choice == 3) {
-		System.out.println("Select a pet from the following list: ");
+		System.out.println("Select a pet from the following list: "); // Use Case 7: Print info sheet
 		for (int i = 0; i < petArray.length; i++) {
 			System.out.println(petArray[i]);
 		}
 		int printingChoice = scanner.nextInt();
 		petArray[printingChoice].getCareProfile();
+
+		/* 
+			Case 8 would be implemented here, but our current implementation of the 
+			CareProfile does not reflect real world use cases (sometimes admin might not
+			be able to enter everything at once, and this use case serves as a contingency to ensure
+			that all of the info is there so that they do not need to reprint the info sheets.
+			this is important so that the staff can have access without having to search any information)
+		*/ 
 	}
 	if (choice == 4) {
 		clearConsole();
