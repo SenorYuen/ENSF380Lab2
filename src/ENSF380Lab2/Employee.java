@@ -2,20 +2,22 @@ package ENSF380Lab2;
 
 public class Employee {
     private String employeeName;
-    private String employeeId;
-    private String managerId;
+    private int employeeId;
+    private int managerId;
     private Employee[] supervisedEmployees;
 
     // Constructor for employee
-    public Employee(String name, String employeeId) {
+    public Employee(String name, int employeeId) {
         this.employeeName = name;
         this.employeeId = employeeId;
-        this.managerId = null;
         this.supervisedEmployees = new Employee[0]; 
     }
 
     // Constructor for manager 
-    public Employee(String name, String employeeId, String managerID) {
+    public Employee(String name, int employeeId, int managerID) throws InvalidIdException {
+        if (employeeId <= 0) {
+            throw new InvalidIdException("Invalid Employee ID");
+        }
         this.employeeName = name;
         this.employeeId = employeeId;
         this.managerId = managerID;
@@ -32,20 +34,20 @@ public class Employee {
     }
 
     // Getter and Setter for employeeId
-    public String getEmployeeId() {
+    public int getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(String employeeId) {
+    public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
     // Getter and Setter for managerId
-    public String getManagerID() {
+    public int getManagerID() {
         return managerId;
     }
 
-    public void setManagerID(String managerID) {
+    public void setManagerID(int managerID) {
         this.managerId = managerID;
     }
 
