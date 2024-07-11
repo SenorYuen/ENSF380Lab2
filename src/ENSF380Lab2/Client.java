@@ -7,7 +7,12 @@ public class Client {
     private String address;
 
     // Constructor
-    public Client(int clientId, String clientName, String phoneNumber, String address) {
+    public Client(int clientId, String clientName, String phoneNumber, String address) throws InvalidIdException {
+
+        if (clientId <= 0) {
+            throw new InvalidIdException("Invalid Client ID");
+        }
+
         this.clientId = clientId;
         this.clientName = clientName;
         this.phoneNumber = phoneNumber;

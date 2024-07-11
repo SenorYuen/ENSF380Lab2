@@ -14,6 +14,9 @@ public class Boarding {
 
     // Constructor
     public Boarding(int boardingId, Date checkIn, Date checkOut, Pet pet, Client client, CareProfile careProfile) {
+        if (checkIn.after(checkOut)) {
+            throw new IllegalArgumentException("Check-in date cannot be after check-out date");
+        }
         this.boardingId = boardingId;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -78,7 +81,11 @@ public class Boarding {
 
     // Method to calculate boarding cost
     public double calculateBoardingCost(Date checkIn, Date checkOut) {
-        
+
+        if (checkIn.after(checkOut)) {
+            throw new IllegalArgumentException("Check-in date cannot be after check-out date");
+        }
+
         // Convert java.util.Date to java.time.LocalDate
         LocalDate localCheckIn = checkIn.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();
         LocalDate localCheckOut = checkOut.toInstant().atZone(java.time.ZoneId.systemDefault()).toLocalDate();

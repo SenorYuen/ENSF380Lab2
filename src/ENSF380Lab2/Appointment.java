@@ -7,6 +7,7 @@ public class Appointment {
     private String reason;
     private Pet bookedPet;
     private Employee employee;
+    
     // Constructor
     public Appointment(String employeeId, Date appointmentDate, String reason, Pet bookedPet, Employee employee) {
         this.appointmentId = employeeId;

@@ -10,7 +10,12 @@ public class Pet {
     private Client owner;
 
 
-    public Pet(int petId, String petName, String species, String colour, String breed, CareProfile careProfile) {
+    public Pet(int petId, String petName, String species, String colour, String breed, CareProfile careProfile) throws InvalidIdException {
+        
+        if (petId <= 0) {
+            throw new InvalidIdException("Invalid Pet ID");
+        }
+        
         this.petId = petId;
         this.petName = petName;
         this.species = species;
