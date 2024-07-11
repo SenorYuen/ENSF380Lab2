@@ -7,6 +7,7 @@ public class Pet {
     private String colour;
     private String breed;
     private CareProfile careProfile;
+    private Client owner;
 
 
     public Pet(int petId, String petName, String species, String colour, String breed, CareProfile careProfile) {
@@ -71,6 +72,16 @@ public class Pet {
 
     public void setCareProfile(CareProfile careProfile) {
         this.careProfile = careProfile;
+    }
+
+    // getter for owner
+    public Client getOwner() {
+        return owner;
+    }
+
+    // setter for owner
+    public void setOwner(Client owner) {
+        this.owner = owner;
     }
 
 }
