@@ -1,5 +1,5 @@
-# ENSF380Lab2
-Adam Yuen, Shahed Issa ENSF380S24
+# ENSF380Lab2 Summer 2024
+Adam Yuen, Shahed Issa ENSF380
 
 How to Run:
 - The user can run this code within the IDE of their choice.
