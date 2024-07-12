@@ -8,3 +8,4 @@ How to use:
 - The user will be greeted by the main menu. By typing in the number indicated, they can select different options.
 - To fully test the functionality, it is best to add a client, then a pet, and then remove the pet to ensure all functions work.
   - The default state of the program has all of the data fields empty, so adding a pet and client will solve this. 
+- Please note that for testing purposes, our "database" is an array of objects that is decalred with 10 elements, so ID's larger than 9 will not work. 
